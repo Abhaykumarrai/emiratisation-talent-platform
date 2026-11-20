@@ -1,6 +1,6 @@
 # UAE Emiratisation Talent Development & Placement Platform — Frontend Prototype
 
-A clickable, zero-build frontend prototype of the platform described in the PRD. It connects government entities, employers, training institutes and Emirati candidates across the full lifecycle: onboarding → verification → assessment → training → matching → recruitment → verified placement → retention & compliance.
+A clickable frontend prototype built with **React + Vite + Tailwind + shadcn/ui** (sidebar dashboard layout, Recharts charts) of the platform described in the PRD. It connects government entities, employers, training institutes and Emirati candidates across the full lifecycle: onboarding → verification → assessment → training → matching → recruitment → verified placement → retention & compliance.
 
 > All data is **illustrative mock data**. No real candidates, employers, government figures or integrations. Government APIs (Nafis, Mawaheb, etc.) are shown as prospective targets only.
 
@@ -24,10 +24,14 @@ A clickable, zero-build frontend prototype of the platform described in the PRD.
 
 ## Run locally
 ```bash
-python -m http.server 8000   # or any static server, then open http://localhost:8000
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # production build in dist/
 ```
 
 ## Structure
-`index.html` · `styles.css` · `data.js` (mock data) · `app.js` (hash-routed vanilla JS app)
+`src/App.tsx` (shell, sidebar, drawers) · `src/portals.tsx` (portal/page specs) · `src/blocks.tsx` (shadcn-based widgets) · `src/data.ts` (mock data) · `src/components/ui` (shadcn components)
+
+Deployed to GitHub Pages by `.github/workflows/deploy.yml`.
 
 Next steps (per PRD): replace mock data with a multi-tenant backend, RBAC/field-level security, consent management, CV parsing and a versioned compliance rule engine.

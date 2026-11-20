@@ -1,7 +1,7 @@
 // Illustrative mock data only — no real candidates, employers or government figures.
-const LIFECYCLE = ["Registered","Verification Pending","Verified","Assessment Pending","Assessed","Training Recommended","Training Enrolled","Training Completed","Job Ready","Shortlisted","Interview","Offered","Joined","Retention Monitoring"];
+export const LIFECYCLE: string[] = ["Registered","Verification Pending","Verified","Assessment Pending","Assessed","Training Recommended","Training Enrolled","Training Completed","Job Ready","Shortlisted","Interview","Offered","Joined","Retention Monitoring"];
 
-const D = {
+export const D: any = {
   candidates: [
     { id:"C-1042", name:"Fatima Al Mansoori", emirate:"Dubai", edu:"BSc Accounting", exp:"2 yrs", skills:["Accounting","IFRS","Excel"], status:"Job Ready", score:86, source:"Self-registration", lang:"Arabic, English", pref:"Banking", completeness:96 },
     { id:"C-1043", name:"Khalid Al Ketbi", emirate:"Abu Dhabi", edu:"BEng Computer Science", exp:"Fresher", skills:["Python","SQL","Data Analytics"], status:"Training Enrolled", score:64, source:"Government import", lang:"Arabic, English", pref:"IT", completeness:88 },

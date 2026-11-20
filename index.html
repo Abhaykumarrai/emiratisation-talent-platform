@@ -1,36 +1,15 @@
 <!doctype html>
-<html lang="en" dir="ltr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Emiratisation Talent Platform</title>
-<meta name="description" content="Frontend prototype: UAE Emiratisation talent development and placement platform with government, employer, institute and candidate portals.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div class="app">
-  <aside class="sidebar" id="sidebar">
-    <div class="brand"><div class="logo">ET</div><div><b data-i="Emiratisation Talent">Emiratisation Talent</b><small data-i="Development & Placement">Development & Placement</small></div></div>
-    <div class="portal-switch"><label for="portal" data-i="Portal">Portal</label><select id="portal"></select></div>
-    <nav class="nav" id="nav"></nav>
-  </aside>
-  <div class="main">
-    <header class="topbar">
-      <button class="btn menu-btn" id="menuBtn" aria-label="Menu">☰</button>
-      <h1 id="title"></h1>
-      <button class="btn" id="lang">العربية</button>
-      <button class="btn" id="theme" aria-label="Toggle theme">◐</button>
-      <div class="user"><div class="avatar" id="avatar"></div><div><span id="uname"></span><small id="urole"></small></div></div>
-    </header>
-    <main class="content" id="view"></main>
-  </div>
-</div>
-<div class="drawer-bg" id="bg"></div>
-<aside class="drawer" id="drawer" aria-live="polite"></aside>
-<div class="toast" id="toast" role="status"></div>
-<script src="data.js"></script>
-<script src="app.js"></script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emiratisation Talent Platform</title>
+    <meta name="description" content="Frontend prototype: UAE Emiratisation talent development and placement platform (shadcn/ui dashboard)." />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
