@@ -1,0 +1,92 @@
+// Illustrative mock data only — no real candidates, employers or government figures.
+const LIFECYCLE = ["Registered","Verification Pending","Verified","Assessment Pending","Assessed","Training Recommended","Training Enrolled","Training Completed","Job Ready","Shortlisted","Interview","Offered","Joined","Retention Monitoring"];
+
+const D = {
+  candidates: [
+    { id:"C-1042", name:"Fatima Al Mansoori", emirate:"Dubai", edu:"BSc Accounting", exp:"2 yrs", skills:["Accounting","IFRS","Excel"], status:"Job Ready", score:86, source:"Self-registration", lang:"Arabic, English", pref:"Banking", completeness:96 },
+    { id:"C-1043", name:"Khalid Al Ketbi", emirate:"Abu Dhabi", edu:"BEng Computer Science", exp:"Fresher", skills:["Python","SQL","Data Analytics"], status:"Training Enrolled", score:64, source:"Government import", lang:"Arabic, English", pref:"IT", completeness:88 },
+    { id:"C-1044", name:"Mariam Al Shamsi", emirate:"Sharjah", edu:"BBA HR", exp:"3 yrs", skills:["HR Management","Recruitment","Payroll"], status:"Interview", score:81, source:"Employer referral", lang:"Arabic, English", pref:"Retail", completeness:92 },
+    { id:"C-1045", name:"Saeed Al Nuaimi", emirate:"Ajman", edu:"Diploma IT", exp:"1 yr", skills:["Networking","Cybersecurity"], status:"Training Recommended", score:58, source:"Government initiative", lang:"Arabic", pref:"Telecom", completeness:74 },
+    { id:"C-1046", name:"Aisha Al Zaabi", emirate:"Dubai", edu:"MSc Data Science", exp:"4 yrs", skills:["Data Analytics","Power BI","Python"], status:"Offered", score:91, source:"Self-registration", lang:"Arabic, English, French", pref:"Banking", completeness:98 },
+    { id:"C-1047", name:"Hamdan Al Dhaheri", emirate:"Abu Dhabi", edu:"BSc Logistics", exp:"2 yrs", skills:["Supply Chain","SAP"], status:"Shortlisted", score:77, source:"Institute referral", lang:"Arabic, English", pref:"Logistics", completeness:90 },
+    { id:"C-1048", name:"Noura Al Falasi", emirate:"Ras Al Khaimah", edu:"BA Business", exp:"Fresher", skills:["Customer Service","Communication"], status:"Assessment Pending", score:0, source:"Government import", lang:"Arabic, English", pref:"Hospitality", completeness:68 },
+    { id:"C-1049", name:"Rashid Al Suwaidi", emirate:"Dubai", edu:"BSc Finance", exp:"5 yrs", skills:["Financial Analysis","Excel","Accounting"], status:"Joined", score:88, source:"Internal team", lang:"Arabic, English", pref:"Banking", completeness:99 },
+    { id:"C-1050", name:"Latifa Al Marri", emirate:"Fujairah", edu:"Diploma Admin", exp:"1 yr", skills:["Office Admin","Excel"], status:"Verification Pending", score:0, source:"Self-registration", lang:"Arabic", pref:"Government", completeness:55 },
+    { id:"C-1051", name:"Omar Al Hammadi", emirate:"Umm Al Quwain", edu:"BEng Civil", exp:"3 yrs", skills:["AutoCAD","Project Mgmt"], status:"Training Completed", score:79, source:"Institute referral", lang:"Arabic, English", pref:"Construction", completeness:91 },
+    { id:"C-1052", name:"Shamma Al Kaabi", emirate:"Abu Dhabi", edu:"BSc Nursing", exp:"2 yrs", skills:["Patient Care","Clinical Docs"], status:"Verified", score:0, source:"Government initiative", lang:"Arabic, English", pref:"Healthcare", completeness:84 },
+    { id:"C-1053", name:"Majid Al Mazrouei", emirate:"Dubai", edu:"BSc Cybersecurity", exp:"Fresher", skills:["Cybersecurity","Linux"], status:"Training Enrolled", score:66, source:"Government import", lang:"Arabic, English", pref:"IT", completeness:86 },
+  ],
+  employers: [
+    ["EMP-201","Gulf Meridian Bank","Banking","Dubai",{b:"Active"},"Verified","Exp. Nov 2027"],
+    ["EMP-202","Falcon Logistics","Logistics","Abu Dhabi",{b:"Active"},"Verified","Exp. Mar 2027"],
+    ["EMP-203","Oasis Retail Group","Retail","Sharjah",{b:"Pending"},"In review","—"],
+    ["EMP-204","Skyline Telecom","Telecommunications","Dubai",{b:"Active"},"Verified","Exp. Jan 2028"],
+    ["EMP-205","Desert Rose Hospitality","Hospitality","Ras Al Khaimah",{b:"Suspended"},"Expired","Expired"],
+  ],
+  institutes: [
+    ["INS-301","Emirates Skills Academy","Data & IT","Dubai",{b:"Active"},"92%","71%"],
+    ["INS-302","Gulf Finance Institute","Finance","Abu Dhabi",{b:"Active"},"88%","64%"],
+    ["INS-303","Al Noor Technical College","Engineering","Sharjah",{b:"Active"},"81%","52%"],
+    ["INS-304","Horizon Cyber School","Cybersecurity","Dubai",{b:"Pending"},"—","—"],
+  ],
+  government: [
+    ["GOV-101","Employment Programme A (illustrative)","Federal",{b:"Active"},"MoU signed","1,200 candidates"],
+    ["GOV-102","Emirate Talent Initiative (illustrative)","Emirate",{b:"Pending"},"Under discussion","Authorization pending"],
+  ],
+  skillGap: [["Data Analytics",100,25],["Cybersecurity",80,15],["Accounting",120,70],["HR Management",60,45],["Customer Service",90,62],["Supply Chain",55,28]],
+  programs: [
+    ["P-01","Data Analytics Professional","IT","8 weeks","Emirates Skills Academy","Data Analyst",{b:"Active"},"AED 6,500"],
+    ["P-02","Cybersecurity Foundations","IT","12 weeks","Horizon Cyber School","SOC Analyst",{b:"Active"},"AED 9,800"],
+    ["P-03","Corporate Accounting & IFRS","Finance","10 weeks","Gulf Finance Institute","Accountant",{b:"Active"},"AED 5,200"],
+    ["P-04","HR Practitioner Certificate","HR","6 weeks","Gulf Finance Institute","HR Executive",{b:"Draft"},"AED 4,100"],
+  ],
+  batches: [
+    ["Data Analytics – Batch 01","25","8 weeks",{p:62},{b:"Ongoing"},"92%"],
+    ["Data Analytics – Batch 02","30","8 weeks",{p:0},{b:"Upcoming"},"—"],
+    ["Cybersecurity – Batch 01","20","12 weeks",{p:100},{b:"Completed"},"89%"],
+    ["Accounting – Batch 03","28","10 weeks",{p:35},{b:"Ongoing"},"94%"],
+  ],
+  requirements: [
+    { id:"REQ-501", title:"Junior Data Analyst", employer:"Gulf Meridian Bank", vac:4, skills:["Data Analytics","SQL","Power BI"], loc:"Dubai", sal:"AED 9–12k", status:"Candidate Sourcing", priority:"High" },
+    { id:"REQ-502", title:"Financial Accountant", employer:"Falcon Logistics", vac:3, skills:["Accounting","IFRS","Excel"], loc:"Abu Dhabi", sal:"AED 8–11k", status:"Shortlisting", priority:"Medium" },
+    { id:"REQ-503", title:"SOC Analyst", employer:"Skyline Telecom", vac:2, skills:["Cybersecurity","Networking"], loc:"Dubai", sal:"AED 11–15k", status:"Platform Review", priority:"High" },
+    { id:"REQ-504", title:"HR Executive", employer:"Oasis Retail Group", vac:5, skills:["HR Management","Recruitment"], loc:"Sharjah", sal:"AED 7–9k", status:"Interview", priority:"Low" },
+  ],
+  forecast: [["Accountants","10","Next quarter"],["Data analysts","5","Next 6 months"],["Customer service executives","15","Next 12 months"]],
+  placements: [
+    ["PL-801","Rashid Al Suwaidi","Gulf Meridian Bank","Financial Analyst","12 Aug 2026",{b:"Employment Verified"},{b:"Retained"}],
+    ["PL-802","Aisha Al Zaabi","Gulf Meridian Bank","Data Analyst","—",{b:"Offer Accepted"},{b:"Verification Pending"}],
+    ["PL-803","Mariam Al Shamsi","Oasis Retail Group","HR Executive","—",{b:"Selected"},{b:"Verification Pending"}],
+    ["PL-804","Hamdan Al Dhaheri","Falcon Logistics","Logistics Coord.","03 Sep 2026",{b:"Joined"},{b:"Verification Pending"}],
+  ],
+  retention: [["PL-801","Rashid Al Suwaidi","Gulf Meridian Bank","12 Aug 2026",{b:"Completed"},{b:"Completed"},{b:"Upcoming"},"—","—"],
+              ["PL-804","Hamdan Al Dhaheri","Falcon Logistics","03 Sep 2026",{b:"Completed"},{b:"Upcoming"},"—","—","—"]],
+  invoices: [
+    ["INV-3001","Gulf Meridian Bank","Placement fee – 2 hires","AED 24,000",{b:"Paid"},"10 Sep 2026"],
+    ["INV-3002","Falcon Logistics","Subscription – annual","AED 18,000",{b:"Pending"},"30 Nov 2026"],
+    ["INV-3003","Emirates Skills Academy","Training contract – Batch 01","AED 162,500",{b:"Overdue"},"01 Nov 2026"],
+    ["INV-3004","Programme A (illustrative)","Government-funded programme – tranche 1","AED 0 (not yet approved)",{b:"Draft"},"—"],
+  ],
+  integrations: [
+    ["Nafis","Candidate import, employment status","Feasibility assessment",{b:"Pending"}],
+    ["Mawaheb","Candidate import","Not started",{b:"Draft"}],
+    ["Emirates Job Bank (AEJobs)","Vacancy sync","Not started",{b:"Draft"}],
+    ["Dubai Careers","Candidate profile sync","Not started",{b:"Draft"}],
+    ["TAMM","Identity / service verification","Not started",{b:"Draft"}],
+    ["CSV / Excel import","Bulk candidate import","Live (manual workflow)",{b:"Active"}],
+  ],
+  audit: [
+    ["19 Nov 2026 10:42","ops.sara","Candidate C-1046 status → Offered","Candidate"],
+    ["19 Nov 2026 10:15","admin.nasser","Approved organization EMP-204","Organization"],
+    ["19 Nov 2026 09:58","gov.officer1","Exported programme report (Programme A)","Report"],
+    ["18 Nov 2026 17:20","ops.sara","Bulk import: 118 valid, 4 rejected","Import"],
+    ["18 Nov 2026 14:03","admin.nasser","Updated compliance rule v2026.2","Compliance"],
+  ],
+  assessments: [
+    ["A-01","Technical – Data Analytics","Technical","40 Q / 45 min","Role-specific"],
+    ["A-02","English Proficiency","Language","30 Q / 30 min","General"],
+    ["A-03","Arabic Proficiency","Language","30 Q / 30 min","General"],
+    ["A-04","Communication","Soft skill","20 Q / 25 min","General"],
+    ["A-05","Aptitude – Numerical","Aptitude","25 Q / 25 min","General"],
+  ],
+};
